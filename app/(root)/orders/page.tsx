@@ -7,7 +7,7 @@ const Orders = async () => {
 
   const orders: OrderType[] = await getOrders(userId as string);
 
-  console.log(orders[1].products);
+  console.log(orders)
 
   return (
     <div className="px-10 py-5 max-sm:px-3">
