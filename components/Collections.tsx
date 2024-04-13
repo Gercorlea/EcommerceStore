@@ -11,15 +11,15 @@ const Collections = async () => {
       {!collections || collections.length === 0 ? (
         <p className="text-body-bold">No collections found</p>
       ) : (
-        <div className="flex gap-8 overflow-auto tailwind-scrollbar-hide">
+        <div className="flex items-center justify-center gap-8 max-sm:flex-co">
           {collections.map((collection: CollectionType) => (
-            <Link href={`/collections/${collection._id}`} key={collection._id} className=" w-80">
+            <Link href={`/collections/${collection._id}`} key={collection._id}>
               <Image
                 src={collection.image}
                 alt={collection.title}
                 width={350}
                 height={200}
-                className="rounded-lg cursor-pointer "
+                className="rounded-lg cursor-pointer"
               />
             </Link>
           ))}
