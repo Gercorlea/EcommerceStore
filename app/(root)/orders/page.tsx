@@ -7,8 +7,6 @@ const Orders = async () => {
 
   const orders: OrderType[] = await getOrders(userId as string);
 
-  console.log(orders)
-
   return (
     <div className="px-10 py-5 max-sm:px-3">
       <p className=" text-heading3-bold my-10">Your Orders</p>
