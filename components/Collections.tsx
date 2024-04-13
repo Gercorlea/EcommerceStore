@@ -11,7 +11,7 @@ const Collections = async () => {
       {!collections || collections.length === 0 ? (
         <p className="text-body-bold">No collections found</p>
       ) : (
-        <div className="flex items-center justify-center gap-8 max-md:overflow-auto">
+        <div className="flex items-center justify-center gap-8 overflow-auto tailwind-scrollbar-hide">
           {collections.map((collection: CollectionType) => (
             <Link href={`/collections/${collection._id}`} key={collection._id} className=" max-md:w-80">
               <Image
