@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ClerkProvider>
+        <ClerkProvider afterSignUpUrl="/" afterSignInUrl="/">
           <ToasterProvider />
           <Navbar />
           {children}
