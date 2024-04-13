@@ -36,7 +36,8 @@ const Wishlist = () => {
     const wishlistProducts = await Promise.all(
       signedInUser.wishlist.map(async (productId) => {
         const res = await getProductDetails(productId);
-        return await res.json();
+        const data = await res.json()
+        return data;
       })
     );
 
