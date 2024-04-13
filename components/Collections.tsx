@@ -13,13 +13,13 @@ const Collections = async () => {
       ) : (
         <div className="flex items-center justify-center gap-8 max-sm:overflow-auto  max-sm:tailwind-scrollbar-hide">
           {collections.map((collection: CollectionType) => (
-            <Link href={`/collections/${collection._id}`} key={collection._id}>
+            <Link href={`/collections/${collection._id}`} key={collection._id} className=" max-sm:w-80">
               <Image
                 src={collection.image}
                 alt={collection.title}
                 width={350}
                 height={200}
-                className="rounded-lg cursor-pointer  max-sm:w-80"
+                className="rounded-lg cursor-pointer "
               />
             </Link>
           ))}
